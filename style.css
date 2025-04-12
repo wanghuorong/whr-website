@@ -1,0 +1,115 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+
+#video-container {
+    position: relative;
+    width: 75%; /* 视频播放器宽度 */
+    height: auto;
+    background-color: black;
+    margin-right: 10px; /* 与侧边栏的间距 */
+}
+
+#video-player {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 视频适应播放器 */
+}
+
+#danmaku-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+#sidebar {
+    width: 25%; /* 侧边栏宽度 */
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 10px;
+}
+
+#peer-area {
+    width: 80%;
+    height: 45%; /* 占据侧边栏的50% */
+    background-color: #e0e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#image-container {
+    width: 80%;
+    height: 55%; /* 占据侧边栏的40% */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e0e0e0;
+    margin-bottom: 10px;
+}
+
+#image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#control-bar {
+    position: relative; /* 相对于侧边栏定位 */
+    width: 80%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#danmaku-text {
+    width: 80%;
+    padding: 5px;
+    margin-right: 5px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    display: none;
+}
+
+button {
+    padding: 5px 10px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.danmaku {
+    position: absolute;
+    color: white;
+    white-space: nowrap; /* 防止弹幕文本换行 */
+    font-size: 16px;
+    z-index: 10; /* 确保弹幕在视频之上 */
+}

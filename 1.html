@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>弹幕示例</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="界面.css">
+</head>
+<body>
+    <div id="video-container">
+        <video id="video-player" controls>
+            <source src="videotest.mp4" type="video/mp4">
+            您的浏览器不支持视频标签。
+        </video>
+        <div id="danmaku-container"></div>
+    </div>
+    <div id="sidebar">
+        <div id="peer-area">留白区域后续再放入插件</div>
+        <div id="image-container">
+            <img  id="click-image" src="zly.png" alt="示例图片">
+        </div>
+        <div id="control-bar">
+            <input type="text" id="danmaku-text" placeholder="输入弹幕内容">
+            <button id="toggle-button">发送弹幕</button>
+        </div>
+    </div>
+    <script src="3.js"></script>
+<script src="事件监听与数据收集.js"></script>
+<script src="交互日志显示.js"></script>
+<script src="热力图数据生成.js"></script>
+<script src="视频结束处理.js"></script>
+
+</body>
+</html>
